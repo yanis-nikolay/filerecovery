@@ -1,0 +1,67 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.1'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+application {
+    mainClass = 'org.example.Main'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version='21.0.5'
+    modules=['javafx.controls', 'javafx.fxml']
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.openjfx:javafx-controls:21.0.1'
+    implementation 'org.openjfx:javafx-fxml:21.0.1'
+    implementation 'com.h2database:h2'
+    implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+bootRun {
+    systemProperty 'spring.profiles.active', 'dev'
+}
+
+bootJar {
+    enabled = true
+    mainClass = 'org.example.Main'
+}
+
+jar {
+    enabled = true
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.Main',
+                'Start-Class': 'org.example.Main'
+        )
+    }
+}

@@ -1,0 +1,109 @@
+* {
+    -fx-font-family: 'Inter', 'SF Pro', sans-serif;
+}
+
+.root {
+    -fx-background-color: #f4f6f9;
+}
+
+.main-container {
+    -fx-padding: 40px;
+    -fx-background-color: transparent;
+}
+
+.header-section {
+    -fx-padding-bottom: 30px;
+    -fx-alignment: center;
+}
+
+.app-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #2c3e50;
+}
+
+.app-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #7f8c8d;
+}
+
+.file-input-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 4);
+}
+
+.file-input {
+    -fx-background-radius: 10px;
+    -fx-background-color: #f8f9fa;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.info-grid {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 4);
+}
+
+.info-label {
+    -fx-font-weight: 600;
+    -fx-text-fill: #34495e;
+    -fx-font-size: 14px;
+}
+
+.info-value {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+}
+
+.action-buttons {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 4);
+}
+
+.btn-primary, .btn-secondary, .btn-help {
+    -fx-background-radius: 10px;
+    -fx-font-weight: 600;
+    -fx-min-width: 120px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0, 0, 2);
+}
+
+.btn-primary {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+}
+
+.btn-secondary {
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: #2c3e50;
+}
+
+.btn-help {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-min-width: 50px;
+}
+
+.result-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #2c3e50;
+}
+
+.result-area {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-font-family: 'Consolas', monospace;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 15, 0, 0, 4);
+}
+
+.btn-primary:hover, .btn-secondary:hover, .btn-help:hover {
+    -fx-opacity: 0.9;
+}
